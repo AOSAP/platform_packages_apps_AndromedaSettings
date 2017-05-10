@@ -41,4 +41,12 @@
             android:fragment="com.aosap.settings.fragments.IconShapes" />
     </PreferenceCategory>
 
+    <!-- Launch music player when headset is connected -->
+    <com.aosap.settings.preferences.SystemSettingSwitchPreference
+        android:key="headset_connect_player"
+        android:title="@string/headset_connect_player_title"
+        android:summary="@string/headset_connect_player_summary"
+        android:defaultValue="false"
+        app:allowDividerAbove="true" />
+
 </PreferenceScreen>
