@@ -340,4 +340,7 @@
     <string name="network_traffic_layout_v">Verticle</string>
     <string name="nettraf_font_size">Single net font size</string>
 
+    <!-- NavBar Visibility -->
+    <string name="navbar_visibility">Enable Navigation Bar</string>
+
 </resources>
