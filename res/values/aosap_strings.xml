@@ -90,4 +90,10 @@
     <string name="qstile_neonlike">Neon Light</string>
     <string name="qstile_triangles">Triangle</string>
 
+    <!-- Screen off animation -->
+    <string name="default_string">Default</string>
+    <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
+
 </resources>
