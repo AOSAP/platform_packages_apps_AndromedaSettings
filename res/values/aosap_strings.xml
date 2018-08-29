@@ -49,4 +49,6 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
 
+    <string name="notification_light_settings">Notifications light</string>
+
 </resources>
