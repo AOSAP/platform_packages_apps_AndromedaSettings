@@ -340,4 +340,7 @@
     <string name="network_traffic_layout_v">Verticle</string>
     <string name="nettraf_font_size">Single net font size</string>
 
+    <!-- Navbar options -->
+    <string name="navbar_invert_layout_title">Invert layout</string>
+
 </resources>
