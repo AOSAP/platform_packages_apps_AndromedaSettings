@@ -37,6 +37,7 @@ import android.os.UserHandle;
 
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import com.android.internal.util.custom.FodUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -51,7 +52,9 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
 
+    private PreferenceCategory mFODIconPickerCategory;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
 
@@ -72,6 +75,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
         mFingerprintVib.setOnPreferenceChangeListener(this);
+        }
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mFODIconPickerCategory = findPreference(FOD_ICON_PICKER_CATEGORY);
+        if (mFODIconPickerCategory != null && !FodUtils.hasFodSupport(getContext())) {
+            prefScreen.removePreference(mFODIconPickerCategory);
         }
     }
 
