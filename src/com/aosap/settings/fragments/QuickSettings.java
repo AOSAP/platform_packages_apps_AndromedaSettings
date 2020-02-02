@@ -54,6 +54,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 Settings.System.QS_TILE_TITLE_VISIBILITY, 1, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.System.QUICK_SETTINGS_VIBRATE, 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
         CustomHeader.reset(mContext);
     }
 
