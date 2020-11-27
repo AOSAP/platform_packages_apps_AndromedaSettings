@@ -18,6 +18,14 @@
     android:title="@string/lockscreen_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:fragment="com.aosap.settings.fragments.FodTweaks"
+        android:icon="@drawable/ic_fod"
+        android:key="fod_tweaks"
+        android:summary="@string/fod_tweaks_summary"
+        android:title="@string/fod_tweaks_title"
+        settings:searchable="false" />
+
         <com.aosap.settings.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_lockscreen"
             android:title="@string/double_tap_sleep_lockscreen_title"

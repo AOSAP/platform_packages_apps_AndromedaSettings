@@ -46,9 +46,17 @@ import com.android.settingslib.search.SearchIndexable;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference;
+
 @SearchIndexable
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
+
+    private static final String FOD_DISABLED_BY_PROP =
+                                "ro.fingerprint.inscreen_disabled";
+
+    private static final String FOD_TWEAKS = "fod_tweaks";
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
 
@@ -63,6 +71,10 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
         Resources resources = getResources();
+
+        if (!isFODdevice()) {
+            prefScreen.removePreference(findPreference(FOD_TWEAKS));
+        }
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
@@ -98,6 +110,10 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
                 Settings.System.LOCKSCREEN_CHARGING_ANIMATION_STYLE, 1, UserHandle.USER_CURRENT);
     }
 
+    private boolean isFODdevice() {
+        return (getResources().getBoolean(
+                com.android.internal.R.bool.config_needCustomFODView));
+    }
 
     @Override
     public int getMetricsCategory() {

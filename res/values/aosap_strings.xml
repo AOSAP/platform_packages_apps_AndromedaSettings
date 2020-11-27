@@ -765,4 +765,8 @@
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Media artwork blur level</string>
 
+    <!-- FOD Tweaks -->
+    <string name="fod_tweaks_title">FOD Tweaks</string>
+    <string name="fod_tweaks_summary">FOD related customization</string>
+
 </resources>
