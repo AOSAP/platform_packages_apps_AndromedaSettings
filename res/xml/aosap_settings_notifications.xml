@@ -27,4 +27,10 @@
             android:value="com.android.settings.Settings$NotificationAppListActivity" />
     </Preference>
 
+    <com.aosap.settings.preferences.SystemSettingSwitchPreference
+        android:key="alert_slider_notifications"
+        android:title="@string/alert_slider_notifications_title"
+        android:summary="@string/alert_slider_notifications_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
