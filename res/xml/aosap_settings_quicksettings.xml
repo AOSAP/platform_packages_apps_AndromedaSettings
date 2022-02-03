@@ -18,4 +18,10 @@
     android:title="@string/quicksettings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <com.aosap.settings.preferences.SecureSettingSwitchPreference
+            android:key="disable_secure_tiles_on_lockscreen"
+            android:title="@string/qstile_requires_unlocking_title"
+            android:summary="@string/qstile_requires_unlocking_summary"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
