@@ -32,7 +32,7 @@
             android:key="android.theme.customization.icon_pack"
             android:title="@string/theme_customization_icon_pack_title"
             android:summary="@string/theme_customization_icon_pack_summary"
-            android:fragment="com.aosap.settings.fragments.StatusbarIcons" />
+            android:fragment="com.aosap.settings.fragments.StatusBarIcons" />
 
         <Preference
             android:key="android.theme.customization.adaptive_icon_shape"
