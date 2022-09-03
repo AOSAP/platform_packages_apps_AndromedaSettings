@@ -43,11 +43,6 @@
             android:defaultValue="true" />
 
         <com.aosap.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_screenshot"
-            android:title="@string/powermenu_screenshot"
-            android:defaultValue="false" />
-
-        <com.aosap.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_settings"
             android:title="@string/powermenu_settings"
             android:defaultValue="false" />
